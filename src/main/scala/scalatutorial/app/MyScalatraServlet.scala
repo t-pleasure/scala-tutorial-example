@@ -96,7 +96,7 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
 
 
 
-  /*
+  /**
    * TASK:
    * Scalatra's multiparams returns a List of params.
    * Write an endpoint in the form: http://localhost:8080/highlow?temps=45,70
@@ -207,7 +207,7 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
 
 
   /**
-   * Task: Implement /maxTemp (maximum temperature for a given date)
+   * TASK: Implement /maxTemp (maximum temperature for a given date)
    */
   get("/maxTemp") {
     // obtain date input
