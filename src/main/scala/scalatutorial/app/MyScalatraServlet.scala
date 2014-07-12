@@ -35,6 +35,11 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
     allClouds(0)
   }
 
+
+
+
+
+
   //CASE CLASS
   /**
    * TASK: Add a field of your choosing to the Cloud case class.
@@ -61,6 +66,12 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
     allClouds.map(_.name.toUpperCase)
   }
 
+
+
+
+
+
+
   case class ChitChat(opener: String)
 
   //EXPRESSIONS
@@ -80,6 +91,10 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
       case "cold" => ChitChat("It's colder than a polar bear's toenails out there!")
     }
   }
+
+
+
+
 
   /*
    * TASK:
@@ -109,7 +124,6 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
   }
 
   get("/highlow") {
-
     // We will use multiParams to obtain the parameters.
     // This will return us something of the form: Seq("10,20", "30,40", "50,60")
     // Note: you can think of the Seq type as a more generic form of a List
@@ -123,8 +137,8 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
       // we are using Scala's string interpolation here
       s"the high is $high and the low is $low"
     }
-
   }
+
 
 
 
@@ -149,6 +163,9 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
    cToF(c)
   }
 
+
+
+
   /* Note: IMPORTANT
    * We are unable to call WeatherService.getRecords() more than once since it will close
    * the weather's file stream. As a result, I will store the records into the weatheRecords variable
@@ -164,7 +181,12 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
     weatherRecords
   }
 
+
+
+
   //FIRST CLASS FUNCTIONS
+
+
 
   /**
    * TASK: Implement /averageTemp:city
@@ -182,6 +204,8 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
     Map("average_high"->averageHigh, "average_low"->averageLow)
   }
 
+
+
   /**
    * Task: Implement /maxTemp (maximum temperature for a given date)
    */
@@ -197,6 +221,11 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport {
     // (note: we can ignore low temps)
     records.maxBy(_.high)
   }
+
+
+
+
+
 
 
   /**
