@@ -1,4 +1,7 @@
 .idea
 .idea_modules
 .lib
+project/.ivy
+project/.boot
+project/.sbtboot
 target
